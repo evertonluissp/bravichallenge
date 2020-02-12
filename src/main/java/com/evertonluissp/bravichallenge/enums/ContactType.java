@@ -1,4 +1,4 @@
-package com.evertonluissp.wirecardchallenge.enums;
+package com.evertonluissp.bravichallenge.enums;
 
 public enum ContactType {
 

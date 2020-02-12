@@ -1,10 +1,10 @@
-package com.evertonluissp.wirecardchallenge.services;
+package com.evertonluissp.bravichallenge.services;
 
 import org.springframework.stereotype.Service;
 
 import java.util.regex.Pattern;
 
-import static com.evertonluissp.wirecardchallenge.utils.StringUtils.removeFirstAndLastCharacter;
+import static com.evertonluissp.bravichallenge.utils.StringUtils.removeFirstAndLastCharacter;
 import static java.util.regex.Pattern.compile;
 
 @Service

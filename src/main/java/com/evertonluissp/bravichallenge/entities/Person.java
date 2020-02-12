@@ -1,4 +1,4 @@
-package com.evertonluissp.wirecardchallenge.entities;
+package com.evertonluissp.bravichallenge.entities;
 
 import java.util.List;
 

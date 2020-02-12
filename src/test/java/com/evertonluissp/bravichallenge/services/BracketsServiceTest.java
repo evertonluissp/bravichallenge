@@ -1,4 +1,4 @@
-package com.evertonluissp.wirecardchallenge.services;
+package com.evertonluissp.bravichallenge.services;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;

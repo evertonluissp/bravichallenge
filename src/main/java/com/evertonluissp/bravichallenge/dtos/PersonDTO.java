@@ -1,6 +1,6 @@
-package com.evertonluissp.wirecardchallenge.dtos;
+package com.evertonluissp.bravichallenge.dtos;
 
-import com.evertonluissp.wirecardchallenge.entities.Person;
+import com.evertonluissp.bravichallenge.entities.Person;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;

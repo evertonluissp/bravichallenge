@@ -1,13 +1,13 @@
-package com.evertonluissp.wirecardchallenge.dtos;
+package com.evertonluissp.bravichallenge.dtos;
 
-import com.evertonluissp.wirecardchallenge.entities.Contact;
-import com.evertonluissp.wirecardchallenge.enums.ContactType;
+import com.evertonluissp.bravichallenge.entities.Contact;
+import com.evertonluissp.bravichallenge.enums.ContactType;
 
 import javax.validation.constraints.AssertTrue;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
-import static com.evertonluissp.wirecardchallenge.utils.StringUtils.removeAllSignals;
+import static com.evertonluissp.bravichallenge.utils.StringUtils.removeAllSignals;
 
 public class ContactDTO {
 
