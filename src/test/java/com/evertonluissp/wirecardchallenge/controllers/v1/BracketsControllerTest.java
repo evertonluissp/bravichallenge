@@ -34,4 +34,15 @@ public class BracketsControllerTest {
                 .andExpect(status().is(200));
     }
 
+    @Test
+    public void GET_invalidInput_Returns204() throws Exception {
+        var validInput = RandomStringUtils.random(1);
+
+        when(service.isBalancedBrackets(any())).thenReturn(false);
+
+        mockMvc
+                .perform(get(PATH).param("input", validInput))
+                .andExpect(status().is(204));
+    }
+
 }
