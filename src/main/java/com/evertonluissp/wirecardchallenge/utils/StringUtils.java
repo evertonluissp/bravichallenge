@@ -6,4 +6,8 @@ public class StringUtils {
         return string.substring(1, string.length() - 1);
     }
 
+    public static String removeAllSignals(String string) {
+        return string.replaceAll("[^0-9]", "");
+    }
+
 }
