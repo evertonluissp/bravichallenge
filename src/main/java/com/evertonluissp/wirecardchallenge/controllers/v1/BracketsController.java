@@ -15,7 +15,7 @@ import static org.springframework.http.ResponseEntity.ok;
 @RequestMapping(PATH)
 public class BracketsController {
 
-    public static final String PATH = "v1/brackets";
+    public static final String PATH = "/v1/brackets";
 
     public final BracketsService service;
 
