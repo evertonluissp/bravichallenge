@@ -23,10 +23,17 @@ dependencies {
 	// Web
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 
+	// Server
+	implementation 'org.springframework.boot:spring-boot-starter-undertow'
+
 	// Test
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
+}
+
+configurations {
+	compile.exclude module: 'spring-boot-starter-tomcat'
 }
 
 test {
