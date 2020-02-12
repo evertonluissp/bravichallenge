@@ -28,4 +28,19 @@ public class BracketsServiceTest {
         assertThat(service.isBalancedBrackets(input)).isTrue();
     }
 
+    @ParameterizedTest
+    @ValueSource(strings = {
+            "(",
+            "}",
+            "[",
+            "()[",
+            "()}",
+            "]{}",
+            "(){[]",
+            "[{()]()}"
+    })
+    public void isBalancedBrackets_invalidInputs_shouldReturnsFalse(String input) {
+        assertThat(service.isBalancedBrackets(input)).isFalse();
+    }
+
 }
