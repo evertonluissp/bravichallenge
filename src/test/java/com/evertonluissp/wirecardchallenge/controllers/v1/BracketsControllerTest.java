@@ -45,4 +45,11 @@ public class BracketsControllerTest {
                 .andExpect(status().is(204));
     }
 
+    @Test
+    public void GET_withoutInput_Returns400() throws Exception {
+        mockMvc
+                .perform(get(PATH))
+                .andExpect(status().is(400));
+    }
+
 }
