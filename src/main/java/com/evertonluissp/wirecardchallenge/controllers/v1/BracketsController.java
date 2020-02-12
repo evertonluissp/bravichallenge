@@ -1,4 +1,4 @@
-package com.evertonluissp.wirecardchallenge.controllers;
+package com.evertonluissp.wirecardchallenge.controllers.v1;
 
 import com.evertonluissp.wirecardchallenge.services.BracketsService;
 import org.springframework.http.ResponseEntity;
@@ -11,7 +11,7 @@ import static org.springframework.http.ResponseEntity.noContent;
 import static org.springframework.http.ResponseEntity.ok;
 
 @RestController
-@RequestMapping("brackets")
+@RequestMapping("v1/brackets")
 public class BracketsController {
 
     public final BracketsService service;
