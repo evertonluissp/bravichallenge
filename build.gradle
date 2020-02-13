@@ -26,6 +26,10 @@ dependencies {
 	// Server
 	implementation 'org.springframework.boot:spring-boot-starter-undertow'
 
+	// Apache Commons Lang
+	implementation 'org.apache.commons:commons-lang3:3.9'
+
+
 	// Test
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
