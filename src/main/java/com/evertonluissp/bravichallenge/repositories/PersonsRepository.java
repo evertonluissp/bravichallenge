@@ -53,8 +53,7 @@ public class PersonsRepository {
     }
 
     public void delete(int id) {
-        var person = person(id).orElseThrow(NotFoundException::new);
-        persons.remove(person);
+        persons.remove(person(id).orElseThrow(NotFoundException::new));
     }
 
 }
