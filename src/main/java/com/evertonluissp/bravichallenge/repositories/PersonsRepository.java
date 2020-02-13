@@ -14,7 +14,13 @@ public class PersonsRepository {
 
     private static int availableId = 0;
 
+    private final ContactsRepository contactsRepository;
+
     private Set<Person> persons = new HashSet<>();
+
+    public PersonsRepository(ContactsRepository contactsRepository) {
+        this.contactsRepository = contactsRepository;
+    }
 
     public int save(Person person) {
         person.id = availableId++;
@@ -35,6 +41,9 @@ public class PersonsRepository {
                 .ifPresentOrElse(
                         storedPerson -> {
                             storedPerson.name = person.name;
+                            storedPerson.contacts.stream()
+                                    .map(contact -> contact.id).forEach(contactsRepository::delete);
+                            person.contacts.forEach(contactsRepository::save);
                             storedPerson.contacts = person.contacts;
                         },
                         () -> {
