@@ -1,6 +1,7 @@
 package com.evertonluissp.bravichallenge.controllers.v1;
 
 import com.evertonluissp.bravichallenge.dtos.PersonDTO;
+import com.evertonluissp.bravichallenge.entities.Contact;
 import com.evertonluissp.bravichallenge.entities.Person;
 import com.evertonluissp.bravichallenge.repositories.PersonsRepository;
 import org.springframework.http.ResponseEntity;
@@ -40,6 +41,12 @@ public class PersonsController {
     @GetMapping("{id}")
     public ResponseEntity<Person> person(@PathVariable int id) {
         return repository.person(id).map(ResponseEntity::ok).orElseGet(() -> notFound().build());
+    }
+
+    @GetMapping("{id}/contacts")
+    public ResponseEntity<Collection<Contact>> personContacts(@PathVariable int id) {
+        var contacts = repository.personContacts(id);
+        return contacts.isEmpty() ? notFound().build() : ok(contacts);
     }
 
     @PutMapping("{id}")

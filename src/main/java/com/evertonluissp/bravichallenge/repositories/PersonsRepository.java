@@ -1,5 +1,6 @@
 package com.evertonluissp.bravichallenge.repositories;
 
+import com.evertonluissp.bravichallenge.entities.Contact;
 import com.evertonluissp.bravichallenge.entities.Person;
 import com.evertonluissp.bravichallenge.exceptions.NotFoundException;
 import org.springframework.stereotype.Repository;
@@ -34,6 +35,10 @@ public class PersonsRepository {
 
     public Optional<Person> person(int id) {
         return persons.stream().filter(person -> person.id == id).findAny();
+    }
+
+    public Collection<Contact> personContacts(int id) {
+        return person(id).orElse(new Person()).contacts;
     }
 
     public void update(int id, Person person) {
