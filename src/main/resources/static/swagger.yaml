@@ -1,0 +1,25 @@
+openapi: 3.0.1
+info:
+  title: ITMLB Challenge
+  version: 1.0.0
+servers:
+  - url: http://localhost:8080
+paths:
+  /v1/brackets:
+    get:
+      summary: Validate input
+      parameters:
+        - in: query
+          name: input
+          schema:
+            type: string
+          required: true
+      responses:
+        200:
+          description: Success - Is balanced bracket
+        204:
+          description: Success - Is not balanced bracket
+        400:
+          description: BadRequest - Input is required
+        500:
+          description: InternalServerError

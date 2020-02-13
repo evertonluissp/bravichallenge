@@ -19,6 +19,10 @@ repositories {
 	mavenCentral()
 }
 
+ext {
+	swaggerVersion = "2.9.2"
+}
+
 dependencies {
 	// Web
 	implementation 'org.springframework.boot:spring-boot-starter-web'
@@ -29,6 +33,9 @@ dependencies {
 	// Apache Commons Lang
 	implementation 'org.apache.commons:commons-lang3:3.9'
 
+	// Swagger
+	implementation("io.springfox:springfox-swagger2:${swaggerVersion}")
+	implementation("io.springfox:springfox-swagger-ui:${swaggerVersion}")
 
 	// Test
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
