@@ -14,7 +14,7 @@ public class PersonDTO {
     @Valid
     public List<ContactDTO> contacts;
 
-    public Person toPerson() {
+    public Person toEntity() {
         var thiz = this;
         return new Person() {{
             name = thiz.name;
