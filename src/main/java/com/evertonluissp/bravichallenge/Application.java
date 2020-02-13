@@ -1,4 +1,4 @@
-package com.evertonluissp.wirecardchallenge;
+package com.evertonluissp.bravichallenge;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

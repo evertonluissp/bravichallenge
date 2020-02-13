@@ -1,6 +1,6 @@
-package com.evertonluissp.wirecardchallenge.controllers.v1;
+package com.evertonluissp.bravichallenge.controllers.v1;
 
-import com.evertonluissp.wirecardchallenge.services.BracketsService;
+import com.evertonluissp.bravichallenge.services.BracketsService;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,7 +8,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.web.servlet.MockMvc;
 
-import static com.evertonluissp.wirecardchallenge.controllers.v1.BracketsController.PATH;
+import static com.evertonluissp.bravichallenge.controllers.v1.BracketsController.PATH;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;

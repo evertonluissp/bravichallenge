@@ -1,4 +1,4 @@
-package com.evertonluissp.wirecardchallenge.utils;
+package com.evertonluissp.bravichallenge.utils;
 
 public class StringUtils {
 
