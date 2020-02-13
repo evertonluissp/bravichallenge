@@ -33,7 +33,7 @@ public class PersonsRepository {
     }
 
     public Optional<Person> person(int id) {
-        return persons.stream().filter(person -> person.id == id).findFirst();
+        return persons.stream().filter(person -> person.id == id).findAny();
     }
 
     public void update(int id, Person person) {
